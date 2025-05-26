@@ -8,7 +8,9 @@ export default function TabLayout() {
       screenOptions={{
         tabBarActiveTintColor: "#007AFF",
         tabBarInactiveTintColor: "#8E8E93",
-        tabBarStyle: {},
+        tabBarStyle: {
+          // Estilos adicionales para la barra de pestañas si lo deseas
+        },
         headerStyle: {
           backgroundColor: "#FFFFFF",
         },
@@ -32,6 +34,24 @@ export default function TabLayout() {
           title: "Perfil",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="person" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="loan-calculator"
+        options={{
+          title: "Calculadora",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="calculator" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="photo-gallery"
+        options={{
+          title: "Galería",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="images" size={size} color={color} />
           ),
         }}
       />
