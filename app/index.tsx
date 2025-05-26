@@ -1,15 +1,16 @@
-import { Text, View } from "react-native";
+import { Redirect } from "expo-router";
+import { Stack } from "expo-router";
 
-export default function Index() {
+export default function Home() {
+  // Redirigir a la pantalla de login
+  return <Redirect href="/login" />;
+}
+
+// Configuración global del Stack Navigator
+export function Layout() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+    <Stack>
+      <Stack.Screen name="login" options={{ headerShown: false }} />
+    </Stack>
   );
 }
