@@ -11,6 +11,16 @@ export function Layout() {
   return (
     <Stack>
       <Stack.Screen name="login" options={{ headerShown: false }} />
+      <Stack.Screen
+        name="Subtasks"
+        component={Subtasks}
+        options={{ title: "Subtareas" }}
+      />
+      <Stack.Screen
+        name="SubtaskDetail"
+        component={SubtaskDetail}
+        options={{ title: "Detalle de Subtarea" }}
+      />
     </Stack>
   );
 }
